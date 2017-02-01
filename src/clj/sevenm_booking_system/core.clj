@@ -102,19 +102,19 @@
   (fn [request]
     (if type
       (case type
-        "email" (if-not (authenticated? request)
-                  (throw-unauthorized)
-                  (rr/content-type
-                   (rr/response {:totalusers
-                                 (:totalusers
-                                  (first  (db/get-total-users-by-email
-                                           {:text text
-                                            })))
-                                 :data (db/get-all-users-by-index-pagesize-by-email
-                                        {:index (parse-int index)
-                                         :pagesize (parse-int pagesize)
-                                         :text text
-                                         })}) content-type)))
+        "username" (if-not (authenticated? request)
+                     (throw-unauthorized)
+                     (rr/content-type
+                      (rr/response {:totalusers
+                                    (:totalusers
+                                     (first  (db/get-total-users-by-email
+                                              {:text text
+                                               })))
+                                    :data (db/get-all-users-by-index-pagesize-by-email
+                                           {:index (parse-int index)
+                                            :pagesize (parse-int pagesize)
+                                            :text text
+                                            })}) content-type)))
       (if-not (authenticated? request)
         (throw-unauthorized)
         (let [res (db/get-all-users-by-index-pagesize
