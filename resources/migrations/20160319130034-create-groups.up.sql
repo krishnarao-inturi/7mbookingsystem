@@ -1,0 +1,31 @@
+-- Name: groups; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
+CREATE TABLE IF NOT EXISTS  groups
+(
+id serial NOT NULL,
+qrnumber text,
+child int,
+adult int,
+emailid text,
+agentname text,
+dateoftravel TIMESTAMP WITHOUT TIME ZONE,
+nights int,
+numberofrooms int,
+lunches numeric,
+boxmeal numeric,
+indianrestaurants numeric,
+carname text,
+caramount numeric,
+packagename text,
+packageprice numeric,
+netprice numeric,
+markupprice text,
+agentprice numeric,
+totalcost numeric,
+notes text,
+createdatetime TIMESTAMP WITH TIME ZONE,
+updateddatetime TIMESTAMP WITH TIME ZONE,
+createdoperatorid int,
+modifiedoperatorid int,
+isactive boolean,
+CONSTRAINT "groups_pkey" PRIMARY KEY (id)
+);

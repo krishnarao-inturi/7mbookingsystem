@@ -1,0 +1,15 @@
+jQuery.prototype.datepicker = function(){};
+jQuery.prototype.datepicker.on = function () {};
+jQuery.prototype.val = function () {};
+jQuery.prototype.timepicker = function () {};
+jQuery.prototype.timepicker.on =function () {};
+jQuery.prototype.rating = function () {};
+jQuery.prototype.rating.on = function () {};
+jQuery.prototype.prop = function () {};
+jQuery.prototype.prop.trigger = function () {};
+jQuery.prototype.attr = function () {};
+jQuery.prototype.notify = function ( content, options ) {};
+jQuery.prototype.notifyDefaults = function ( content, options ) {};
+jQuery.prototype.notifyClose = function ( content, options ) {};
+// jQuery.prototype.chosen = function(arg1) {};
+jQuery.prototype.modal = function () {};
